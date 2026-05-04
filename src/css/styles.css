@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/* ─────────────────────────────────────────
+   FONT
+───────────────────────────────────────── */
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+ 
+/* ─────────────────────────────────────────
+   SCROLLBAR
+───────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+}
+ 
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-full;
+}
+ 
+/* ─────────────────────────────────────────
+   COMPONENTS
+───────────────────────────────────────── */
+@layer components {
+ 
+    /* ── NAVBAR ── */
+    .navbar {
+        @apply fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50
+        backdrop-blur-xl bg-white/80 border border-slate-200
+        rounded-2xl shadow-sm transition-all duration-300;
+    }
+ 
+    /* ── LAYOUT ── */
+    .section {
+        @apply py-24 px-6 lg:px-8 max-w-7xl mx-auto;
+    }
+ 
+    .section-title {
+        @apply text-center text-4xl lg:text-6xl font-black mb-20 text-slate-900;
+    }
+ 
+    /* ── CARDS (index) ── */
+    .card {
+        @apply bg-white border border-slate-200 rounded-2xl p-8
+        hover:-translate-y-2 hover:border-blue-500/40
+        transition-all duration-300 shadow-sm hover:shadow-md;
+    }
+ 
+    .card-icon {
+        @apply w-14 h-14 bg-blue-100 rounded-xl flex items-center
+        justify-center text-xl text-blue-600 mb-5 mx-auto
+        transition-transform duration-300;
+    }
+ 
+    /* ── BOTÕES ── */
+    .btn-primary {
+        @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
+        font-semibold shadow-sm hover:shadow-md
+        hover:-translate-y-0.5 transition-all duration-300
+        bg-blue-600 text-white hover:bg-blue-700;
+    }
+ 
+    .btn-secondary {
+        @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl
+        font-semibold border border-slate-300
+        hover:border-blue-500 hover:bg-blue-50
+        hover:text-blue-600 transition-all duration-300;
+    }
+ 
+    /* ── DROPDOWN ── */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        margin-top: 20px;
+        width: 288px;
+
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+
+        transition: all 200ms ease;
+        z-index: 50;
+    }
+
+    .dropdown-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-btn {
+        @apply flex items-center gap-2 px-2 py-1 text-base font-medium
+        text-slate-600 hover:text-blue-600 transition-all rounded-md hover:bg-slate-50;
+    }
+
+    .dropdown-icon {
+        @apply transition-transform duration-300;
+    }
+
+    .dropdown-item {
+        @apply block px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all;
+    }
+ 
+    /* ── HERO (index) ── */
+    .hero {
+        @apply min-h-[90vh] flex items-center relative overflow-hidden;
+    }
+ 
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('https://thumbs.dreamstime.com/b/geometric-abstract-background-connected-line-dots-structure-molecule-communication-big-data-visualization-medical-109551120.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15;
+    }
+ 
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top left, rgba(59, 131, 246, 0.307), transparent 50%);
+    }
+ 
+    /* ── BENEFITS ── */
+    .benefits-bg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top right, rgba(59, 131, 246, 0.307), transparent 50%);
+    }
+ 
+    /* ── TRANSITION BAND ── */
+    .transition-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('https://thumbs.dreamstime.com/b/geometric-abstract-background-connected-line-dots-structure-molecule-communication-big-data-visualization-medical-109551120.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.15;
+    }
+ 
+    /* ─────────────────────────────────────────
+       SOBRE NÓS
+    ───────────────────────────────────────── */
+ 
+    /* ── Hero (sobre nós) ── */
+    .about-hero {
+        @apply min-h-[60vh] flex items-center relative overflow-hidden;
+    }
+ 
+    .about-hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('https://thumbs.dreamstime.com/b/geometric-abstract-background-connected-line-dots-structure-molecule-communication-big-data-visualization-medical-109551120.jpg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+    }
+ 
+    .about-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top left, rgba(59, 131, 246, 0.25), transparent 60%);
+    }
+ 
+    /* ── Stat card ── */
+    .stat-card {
+        @apply bg-white border border-slate-200 rounded-2xl p-8 text-center
+        shadow-sm transition-all duration-300
+        hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-md;
+    }
+ 
+    /* ── Value card ── */
+    .value-card {
+        @apply bg-white border border-slate-200 rounded-2xl p-8
+        shadow-sm transition-all duration-300
+        hover:-translate-y-1.5 hover:border-blue-500/35 hover:shadow-md;
+    }
+ 
+    /* ── Team card ── */
+    .team-card {
+        @apply bg-white border border-slate-200 rounded-2xl p-8 text-center
+        shadow-sm transition-all duration-300
+        hover:-translate-y-1.5 hover:border-blue-500/35 hover:shadow-md;
+    }
+ 
+    /* ── Team avatar ── */
+    .team-avatar {
+        @apply w-20 h-20 rounded-full flex items-center justify-center
+        text-2xl font-bold text-white mx-auto mb-5;
+    }
+ 
+    /* ── Section badge ── */
+    .section-badge {
+        @apply inline-flex items-center gap-1.5
+        bg-blue-50 text-blue-600 border border-blue-200
+        px-3.5 py-1.5 rounded-full
+        text-xs font-semibold uppercase tracking-wider mb-6;
+    }
+ 
+    /* ── Mission block ── */
+    .mission-block {
+        @apply rounded-3xl p-14 text-white relative overflow-hidden;
+        background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    }
+ 
+    .mission-block::before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: -10%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+    }
+ 
+    .mission-block::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -5%;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.04);
+    }
+ 
+    /* ── Timeline ── */
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #2563eb 0%, #93c5fd 100%);
+        transform: translateX(-50%);
+    }
+ 
+    .timeline-dot {
+        @apply w-4 h-4 rounded-full bg-blue-600 flex-shrink-0;
+        border: 3px solid white;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+    }
+ 
+    .timeline-dot--active {
+        @apply ring-4 ring-blue-100;
+    }
+ 
+    /* ── Partner chip ── */
+    .partner-chip {
+        @apply inline-flex items-center gap-2 px-5 py-2.5
+        bg-white border border-slate-200 rounded-full
+        text-sm font-medium text-slate-500 shadow-sm;
+    }
+ 
+    /* ── Gradient text utility ── */
+    .text-gradient {
+        background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+ 
+}
+ 
+/* ─────────────────────────────────────────
+   ANIMATIONS
+───────────────────────────────────────── */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+}
+ 
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+ 
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .nav-menu {
+        @apply hidden;
+    }
+ 
+    .hero {
+        @apply flex-col text-center pt-20 lg:pt-0 gap-12;
+    }
+}

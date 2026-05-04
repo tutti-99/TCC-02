@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstraGuard - ASPM com IA</title>
+
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-inter">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="flex items-center justify-between px-6 h-16 max-w-6xl mx-auto">
+
+            <!-- LOGO -->
+            <a href="index.html" class="flex items-center gap-3 font-semibold text-slate-800">
+                <div class="w-9 h-9 bg-blue-600 text-white rounded-lg flex items-center justify-center">
+                    <i class="fas fa-shield-halved text-sm"></i>
+                </div>
+                <span>AstraGuard</span>
+            </a>
+
+            <!-- MENU CENTRAL -->
+            <div class="flex items-center gap-8 text-sm">
+
+                <a href="#problema" class="dropdown-btn text-slate-600 hover:text-blue-600 transition">
+                    Problema
+                </a>
+
+                <!-- PRODUTOS -->
+                <div class="relative dropdown">
+
+                    <button data-dropdown="produtos"
+                        class="dropdown-btn flex items-center gap-1 text-slate-600 hover:text-blue-600 transition">
+                        Produtos
+                        <i class="fas fa-chevron-down dropdown-icon transition-transform duration-300"></i>
+                    </button>
+
+                    <div id="produtos-menu" class="dropdown-menu opacity-0 invisible translate-y-2">
+
+                        <a href="#" class="dropdown-item">ASPM Core</a>
+                        <a href="#" class="dropdown-item">AI Risk Engine</a>
+                        <a href="#" class="dropdown-item">Asset Discovery</a>
+
+                    </div>
+                </div>
+
+                <!-- SERVIÇOS -->
+                <div class="relative dropdown">
+
+                    <button data-dropdown="servicos"
+                        class="dropdown-btn flex items-center gap-1 text-slate-600 hover:text-blue-600 transition">
+                        Serviços
+                        <i class="fas fa-chevron-down dropdown-icon transition-transform duration-300"></i>
+                    </button>
+
+                    <div id="servicos-menu" class="dropdown-menu opacity-0 invisible translate-y-2">
+
+                        <a href="#" class="dropdown-item">AppSec Consulting</a>
+                        <a href="#" class="dropdown-item">AI Risk Assessment</a>
+                        <a href="#" class="dropdown-item">Managed ASPM</a>
+                        <a href="#" class="dropdown-item">Pentest Contínuo</a>
+
+                    </div>
+                </div>
+
+                <!-- EMPRESA -->
+                <div class="relative dropdown">
+
+                    <button data-dropdown="empresa"
+                        class="dropdown-btn flex items-center gap-1 text-slate-600 hover:text-blue-600 transition">
+                        Empresa
+                        <i class="fas fa-chevron-down dropdown-icon transition-transform duration-300"></i>
+                    </button>
+
+                    <div id="empresa-menu" class="dropdown-menu opacity-0 invisible translate-y-2">
+
+                        <a href="sobre.html" class="dropdown-item">Sobre nós</a>
+                        <a href="#" class="dropdown-item">Carreiras</a>
+                        <a href="#" class="dropdown-item">Contato</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LOGIN -->
+            <div class="flex items-center">
+                <a href="#"
+                    class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition">
+                    Login
+                </a>
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- FIM NAVBAR -->
+
+    <!-- HERO -->
+    <section class="hero relative overflow-hidden">
+
+        <!-- BACKGROUND IMAGE -->
+        <div class="hero-bg"></div>
+
+        <!-- OVERLAY -->
+        <div class="hero-overlay"></div>
+
+        <div class="relative z-10 pt-32 pb-20 px-6 max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+            <div>
+
+                <div class="inline-flex bg-white text-blue-600 px-4 py-1.5 rounded-full text-sm mb-6">
+                    Plataforma ASPM com IA
+                </div>
+
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-slate-900">
+                    Priorize riscos reais.<br>
+                    <span class="text-blue-600">Pare de perder tempo com ruído.</span>
+                </h1>
+
+                <p class="text-lg text-slate-900 mb-8">
+                    Correlacione vulnerabilidades, ativos e contexto de negócio para tomar decisões mais rápidas e
+                    inteligentes.
+                </p>
+
+                <div class="flex gap-4">
+                    <a href="#" class="btn-primary">
+                        Agendar demonstração
+                    </a>
+
+                    <a href="#" class="btn-secondary">
+                        Como funciona
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- VISUAL -->
+            <div class="bg-white/90 backdrop-blur border border-slate-200 rounded-2xl p-6 shadow-sm">
+
+                <div class="space-y-4">
+
+                    <div class="flex justify-between bg-slate-50 p-3 rounded-lg">
+                        <span>API Exposta</span>
+                        <span class="text-red-600 text-sm">Crítico</span>
+                    </div>
+
+                    <div class="flex justify-between bg-slate-50 p-3 rounded-lg">
+                        <span>Dependência vulnerável</span>
+                        <span class="text-yellow-600 text-sm">Médio</span>
+                    </div>
+
+                    <div class="flex justify-between bg-slate-50 p-3 rounded-lg">
+                        <span>Configuração incorreta</span>
+                        <span class="text-green-600 text-sm">Baixo</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FIM HERO -->
+
+    <!-- BENEFÍCIOS -->
+    <section class="benefits relative overflow-hidden">
+
+        <!-- BACKGROUND GRADIENT -->
+        <div class="benefits-bg"></div>
+
+        <div class="relative z-10 pt-32 pb-20 px-6 max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+
+                <div class="space-y-4">
+
+                    <div class="flex justify-between bg-slate-50 p-3 rounded-lg">
+                        <span>Risco priorizado automaticamente</span>
+                        <span class="text-blue-600 text-sm">IA</span>
+                    </div>
+
+                    <div class="flex justify-between bg-slate-50 p-3 rounded-lg">
+                        <span>Correlação entre ativos</span>
+                        <span class="text-blue-600 text-sm">Ativo</span>
+                    </div>
+
+                    <div class="flex justify-between bg-slate-50 p-3 rounded-lg">
+                        <span>Contexto de negócio aplicado</span>
+                        <span class="text-blue-600 text-sm">OK</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+                    Reduza ruído. Foque no que importa.
+                </h2>
+
+                <p class="text-slate-900 mb-8 text-lg">
+                    Consolide dados de múltiplas ferramentas, entenda impacto real e priorize riscos.
+                </p>
+
+                <ul class="space-y-4">
+
+                    <li class="flex gap-3">
+                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                        Correlação inteligente de vulnerabilidades
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                        Priorização baseada em risco real
+                    </li>
+
+                    <li class="flex gap-3">
+                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                        Visibilidade completa da superfície de ataque
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FIM BENEFÍCIOS -->
+
+    <!-- PROBLEMA -->
+    <section id="problema" class="relative z-10 py-20 px-6 max-w-6xl mx-auto text-center">
+
+
+        <h2 class="text-3xl lg:text-5xl font-bold mb-12">
+            O caos da segurança moderna
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card">
+                <h3 class="font-semibold mb-2">Alert Fatigue</h3>
+                <p class="text-sm text-slate-500">Alertas irrelevantes consomem tempo.</p>
+            </div>
+
+            <div class="card">
+                <h3 class="font-semibold mb-2">Ferramentas Fragmentadas</h3>
+                <p class="text-sm text-slate-500">Falta de visão centralizada.</p>
+            </div>
+
+            <div class="card">
+                <h3 class="font-semibold mb-2">Falta de Contexto</h3>
+                <p class="text-sm text-slate-500">Dificuldade em priorizar riscos.</p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FIM PROBLEMA -->
+
+    <!-- DIV DE TRANSIÇÃO (BG) -->
+    <div class="w-full h-[300px] relative overflow-hidden">
+        <div class="transition-bg"></div>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="relative z-10 py-20 px-6 border-t border-slate-100">
+
+        <div class="max-w-6xl mx-auto text-center">
+
+            <h2 class="text-3xl lg:text-5xl font-bold mb-12">Serviços</h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="card">
+                    <h3 class="font-semibold mb-2">AppSec Consulting</h3>
+                    <p class="text-sm text-slate-500">Consultoria especializada.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="font-semibold mb-2">AI Risk</h3>
+                    <p class="text-sm text-slate-500">Avaliação inteligente de riscos.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="font-semibold mb-2">Managed ASPM</h3>
+                    <p class="text-sm text-slate-500">Gestão completa da segurança.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FIM SERVIÇOS -->
+
+    <!-- CTA -->
+    <section class="py-20 px-6 text-center max-w-4xl mx-auto">
+
+        <h2 class="text-3xl lg:text-5xl font-bold mb-6">
+            Pronto para evoluir sua segurança?
+        </h2>
+
+        <p class="text-slate-500 mb-8">
+            Reduza ruído e foque no que realmente importa.
+        </p>
+
+        <a href="#" class="btn-primary">
+            Agendar demonstração
+        </a>
+
+    </section>
+    <!-- FIM CTA -->
+
+    <!-- FOOTER simples -->
+    <footer class="border-t border-slate-200 py-8 px-6 bg-gray-100">
+        <div
+            class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+
+            <div class="flex items-center gap-2 font-medium text-slate-800">
+                <div class="w-7 h-7 bg-blue-600 text-white rounded-md flex items-center justify-center">
+                    <i class="fas fa-shield-halved text-xs"></i>
+                </div>
+                AstraGuard
+            </div>
+
+            <p class="text-slate-800">© 2026 AstraGuard. Todos os direitos reservados.</p>
+
+            <div class="flex gap-4 text-slate-800">
+                <a href="#" class="hover:text-blue-600 transition">Privacidade</a>
+                <a href="#" class="hover:text-blue-600 transition">Termos</a>
+                <a href="#" class="hover:text-blue-600 transition">Contato</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
